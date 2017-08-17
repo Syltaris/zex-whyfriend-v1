@@ -7,3 +7,11 @@ body {
 #layoutBody {
 	position: relative;
 }
+
+.userPosts_item .media-left {
+	padding: 5px 5px 5px 5px;
+}
+
+.userPosts_item .media-body {
+	padding: 10px 5px 10px 0px;
+}
