@@ -8,6 +8,10 @@ body {
 	position: relative;
 }
 
+.navbar-brand {
+	padding: 5px 5px 5px 5px;
+}
+
 .userPosts_item .media-left {
 	padding: 5px 5px 5px 5px;
 }
