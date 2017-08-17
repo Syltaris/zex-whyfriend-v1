@@ -19,3 +19,8 @@ body {
 .userPosts_item .media-body {
 	padding: 10px 5px 10px 0px;
 }
+
+	.userPosts_item .footing {
+		float: right;
+		padding: 0px 5px;
+	}
