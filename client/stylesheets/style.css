@@ -22,7 +22,12 @@ body {
 
 		.postItem .panel-body .well {
 			padding: 5px 5px 5px 5px;
+			margin: 10px 0px 10px 0px;
 		}
+
+	.postItem .btn {
+		margin: 0px 10px 10px 10px;
+	}
 
 	.postItem .panel-footer {
 		padding: 5px 5px 15px 0px;
