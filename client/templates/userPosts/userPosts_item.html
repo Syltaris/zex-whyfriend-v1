@@ -1,9 +1,17 @@
 <!-- individual post -->
 
 <template name="userPosts_item">
-<div class="col-md-3">
-	<div class="panel">
-		{{title}}
+<div class="postItem col-md-3">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h4>{{username}}</h4>
+			<h5>Location: {{location}}</h5>
+			<h5>Time: {{timePreference}}</h5>
+			<h5 class="well">{{summary}}</h5>
+		</div>
+		<div class="panel-footer">
+			<h6>posted on {{datePosted}}</h6>
+		</div>
 	</div>
 </div>
 </template>

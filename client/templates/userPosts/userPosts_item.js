@@ -1,18 +1,27 @@
 
+var SUMMARY_LIMIT = 20;
+
 Template.userPosts_item.helpers({
-	title: function() {
-		return this.postContent.title;
-	},
-	desc: function() {
-		return this.postContent.desc;
-	},
-	authorName: function() {
+	username: function() {
 		return this.authorName;
+	},
+	location: function() {
+		return this.location;
+	},
+	timePreference: function() {
+		return this.timePreference || 'None';
+	},
+	summary: function() {
+		if(this.postContent.desc.length > SUMMARY_LIMIT) {
+			return this.postContent.desc.slice(0, SUMMARY_LIMIT) + '...';
+		}
+
+		return this.postContent.desc;
 	},
 	datePosted: function() {
 		return this.datePosted.toDateString();
 	},
-	location: function() {
-		return this.location;
+	title: function() {
+		return this.postContent.title;
 	},
 });

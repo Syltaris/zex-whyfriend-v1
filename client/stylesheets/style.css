@@ -12,15 +12,24 @@ body {
 	padding: 5px 5px 5px 5px;
 }
 
-.userPosts_item .media-left {
-	padding: 5px 5px 5px 5px;
+.postItem {
+	padding: 0px 10px 0px 10px;
 }
 
-.userPosts_item .media-body {
-	padding: 10px 5px 10px 0px;
-}
-
-	.userPosts_item .footing {
-		float: right;
-		padding: 0px 5px;
+	.postItem .panel-body {
+		padding: 5px 10px 0px 10px;
 	}
+
+		.postItem .panel-body .well {
+			padding: 5px 5px 5px 5px;
+		}
+
+	.postItem .panel-footer {
+		padding: 5px 5px 15px 0px;
+	}
+	
+	.postItem .panel-footer h6 {
+		float: right;
+		margin: 0;
+	}
+
