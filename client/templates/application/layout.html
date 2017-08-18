@@ -3,9 +3,8 @@
 <template name="layout">
 	<div class="container">
 		{{> header}}
+		<div id=layoutBody>
+			{{> yield}}
+		</div>
 	</div>
-	<div id=layoutBody>
-		{{> yield}}
-	</div>
-
 </template>

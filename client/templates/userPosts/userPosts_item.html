@@ -9,9 +9,17 @@
 			<h5>Time: {{timePreference}}</h5>
 			<h5 class="well">{{summary}}</h5>
 		</div>
-		<button type="button" class="btn btn-default">Check</button>
-		<button type="button" class="btn btn-default">Contact</button>
-
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#" class="btn btn-primary btn-sm" role="button">Check</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="contact btn btn-default btn-sm" role="button">Contact</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="decline btn btn-danger btn-sm" role="button">Decline</a>
+			</div>
+		</div>
 		<div class="panel-footer">
 			<h6>posted on {{datePosted}}</h6>
 		</div>

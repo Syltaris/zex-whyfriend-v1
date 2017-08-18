@@ -13,7 +13,7 @@ body {
 }
 
 .postItem {
-	padding: 0px 10px 0px 10px;
+	padding: 5px 5px;
 }
 
 	.postItem .panel-body {
@@ -29,6 +29,10 @@ body {
 		margin: 0px 10px 10px 10px;
 	}
 
+		.postItem .contact, .postItem .decline {
+			align: right;
+		}
+
 	.postItem .panel-footer {
 		padding: 5px 5px 15px 0px;
 	}
@@ -38,3 +42,6 @@ body {
 		margin: 0;
 	}
 
+.submit-form {
+	margin: 0px;
+}
