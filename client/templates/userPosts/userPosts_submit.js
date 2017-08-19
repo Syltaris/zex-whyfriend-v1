@@ -20,6 +20,12 @@ Template.postsSubmit.events({
 
 		Meteor.call('postsInsert', postAttributes, function(error, result) {
 			console.log(result);
+
+			if(error) {
+				alert(error.reason);
+			}
+
+			Router.go('homepage');
 		});
 	}
 });
