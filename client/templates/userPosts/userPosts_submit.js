@@ -11,7 +11,10 @@ Template.postsSubmit.events({
 
 		var postAttributes = {
 			location: $(e.target).find('[name=location]').val(),
-			timePref: [data.fromTime.value, data.toTime.value],
+			timePref: {
+				fromTime: data.fromTime.value, 
+				toTime: data.toTime.value,
+			},
 			desc: data.description.value,
 		};
 
