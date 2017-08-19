@@ -25,3 +25,11 @@ Template.userPosts_item.helpers({
 		return this.postContent.title;
 	},
 });
+
+Template.userPosts_item.events({
+	'click .decline': function(e) {
+		e.preventDefault();
+
+		UserPosts.remove(this._id);
+	},
+});
