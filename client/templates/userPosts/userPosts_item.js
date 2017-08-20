@@ -27,6 +27,14 @@ Template.userPosts_item.helpers({
 });
 
 Template.userPosts_item.events({
+	'click .check': function(e) {
+			e.preventDefault();
+
+			var postToView = UserPosts.findOne({_id: this._id});
+			console.log(postToView);
+
+			Modal.show('postsView', postToView);
+	},
 	'click .decline': function(e) {
 		e.preventDefault();
 
