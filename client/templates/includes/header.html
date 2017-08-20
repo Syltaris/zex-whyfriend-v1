@@ -4,12 +4,16 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="{{pathFor 'homepage'}}">
-				<img src="/img/logo-whyfriend.png" width="40" height="40" alt="logo-whyfriend">	
+				<img src="/img/logo-whyfriend.png" width="40" height="40" alt="logo-whyfriend">
 			</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="{{pathFor 'postsSubmit'}}">Submit Post</a></li>
-			<li><a href="{{pathFor ''}}">Placeholder 2</a></li>
+			{{#if currentUser}}
+				<li><a href="{{pathFor 'postsSubmit'}}">Submit Post</a></li>
+			{{/if}}
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			{{> loginButtons}}
 		</ul>
 	</div>
 </nav>
