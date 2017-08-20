@@ -1,6 +1,6 @@
 /*
 *	This contains methods that will allow
-*	filtering, searching, changing views 
+*	filtering, searching, changing views
 * 	of the different posts.
 */
 

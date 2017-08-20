@@ -12,7 +12,7 @@ Template.postsSubmit.events({
 		var postAttributes = {
 			location: $(e.target).find('[name=location]').val(),
 			timePref: {
-				fromTime: data.fromTime.value, 
+				fromTime: data.fromTime.value,
 				toTime: data.toTime.value,
 			},
 			desc: data.description.value,
@@ -21,11 +21,11 @@ Template.postsSubmit.events({
 		Meteor.call('postsInsert', postAttributes, function(error, result) {
 			console.log(result);
 
-			if(error) {
+			if (error) {
 				alert(error.reason);
 			}
 
 			Router.go('homepage');
 		});
-	}
+	},
 });

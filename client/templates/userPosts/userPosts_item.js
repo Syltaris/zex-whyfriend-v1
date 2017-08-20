@@ -12,7 +12,7 @@ Template.userPosts_item.helpers({
 		return 'from ' + this.timePref.fromTime + ' to ' + this.timePref.toTime;
 	},
 	summary: function() {
-		if(this.postContent.desc.length > SUMMARY_LIMIT) {
+		if (this.postContent.desc.length > SUMMARY_LIMIT) {
 			return this.postContent.desc.slice(0, SUMMARY_LIMIT) + '...';
 		}
 

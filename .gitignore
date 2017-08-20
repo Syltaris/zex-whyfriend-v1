@@ -1,1 +1,4 @@
 node_modules/
+
+*this is for Atom's linter-eslint package
+.eslintrc
