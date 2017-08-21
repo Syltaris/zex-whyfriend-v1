@@ -38,6 +38,9 @@ Template.userPosts_item.events({
 	'click .decline': function(e) {
 		e.preventDefault();
 
-		UserPosts.remove(this._id);
+		var postToDecline = UserPosts.findOne({_id: this._id});
+
+		postToDecline.declinedUsers.push(Meteor.userId());
+		UserPosts.update(postToDecline._id, {$set: {declinedUsers: postToDecline.declinedUsers}});
 	},
 });
