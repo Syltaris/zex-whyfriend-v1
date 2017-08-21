@@ -3,14 +3,15 @@
 *	Data format is as follows:
 *		_id: postId,
 *		authorName: String, poster's username,
-*		location: String, author's country,state,
 *		datePosted: Object instanceof Date, date of publication,
+*		timePref: [fromTime, toTime],
 *		postContent:
 *			title: String, title of post,
 *			desc: String, description/summary of post,
-*			content: String, full content of post,
+*			content: String, full content of post
 *			image: ???URI???, full image of post,
-*		tags: Array of Strings, tags of post
+*		tags: Object of Strings, tags of post
+*		declinedUsers: Array, IDs of users who declined the request
 */
 
 if (UserPosts.find().count() <= 0) {
@@ -20,7 +21,7 @@ if (UserPosts.find().count() <= 0) {
 		UserPosts.insert({
 			authorName: 'l33th4x000r'+i,
 			location: 'Beijing, Smog City',
-
+			timePref: [now + i*3600*1000, now + i*36*3600*1000],
 			datePosted: new Date(now - 8 * 3600 * 1000),
 			postContent: {
 				title: 'ASL222?',
@@ -35,6 +36,7 @@ if (UserPosts.find().count() <= 0) {
 	UserPosts.insert({
 		authorName: 'Sash Gray',
 		location: 'Shanghai, Xujiahui',
+		timePref: [now + 3600*1000, now + 36*3600*1000],
 		datePosted: new Date(now + 1 * 3600 * 1000),
 		postContent: {
 			title: 'Extraordinary Request',
