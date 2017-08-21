@@ -16,16 +16,16 @@ body {
 	padding: 5px 5px;
 }
 
-	.postItem .panel-body {
+	.postItem .panel-body, .userOwnPosts_item .panel-body {
 		padding: 5px 10px 0px 10px;
 	}
 
-		.postItem .panel-body .well {
+		.postItem .panel-body .well, .userOwnPosts_item .panel-body .well {
 			padding: 5px 5px 5px 5px;
 			margin: 10px 0px 10px 0px;
 		}
 
-	.postItem .btn {
+	.postItem .btn, .userOwnPosts_item .btn {
 		margin: 0px 10px 10px 10px;
 	}
 
@@ -33,11 +33,16 @@ body {
 			align: right;
 		}
 
-	.postItem .panel-footer {
+		.userOwnPosts_item .delete {
+			align: right;
+			float: right;
+		}
+
+	.postItem .panel-footer,	.userOwnPosts_item .panel-footer {
 		padding: 5px 5px 15px 0px;
 	}
 
-	.postItem .panel-footer h6 {
+	.postItem .panel-footer h6, .userOwnPosts_item .panel-footer h6 {
 		float: right;
 		margin: 0;
 	}
