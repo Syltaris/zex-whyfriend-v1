@@ -21,7 +21,10 @@ if (UserPosts.find().count() <= 0) {
 		UserPosts.insert({
 			authorName: 'l33th4x000r'+i,
 			location: 'Beijing, Smog City',
-			timePref: [now + i*3600*1000, now + i*36*3600*1000],
+			timePref: {
+				fromTime: new Date(now + i*3600*1000),
+				toTime: new Date(now + i*36*3600*1000),
+			},
 			datePosted: new Date(now - 8 * 3600 * 1000),
 			postContent: {
 				title: 'ASL222?',
@@ -36,7 +39,10 @@ if (UserPosts.find().count() <= 0) {
 	UserPosts.insert({
 		authorName: 'Sash Gray',
 		location: 'Shanghai, Xujiahui',
-		timePref: [now + 3600*1000, now + 36*3600*1000],
+		timePref: {
+			fromTime: new Date(now + 3600*1000),
+			toTime: new Date(now + 36*3600*1000),
+		},
 		datePosted: new Date(now + 1 * 3600 * 1000),
 		postContent: {
 			title: 'Extraordinary Request',

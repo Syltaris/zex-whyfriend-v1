@@ -9,11 +9,17 @@ Template.postsSubmit.events({
 
 		var data = e.target;
 
+		var toTime = parseInt(data.toTime.value);
+		var fromTime = parseInt(data.fromTime.value);
+
+		check(fromTime, Number);
+		check(toTime, Number);
+
 		var postAttributes = {
 			location: $(e.target).find('[name=location]').val(),
 			timePref: {
-				fromTime: data.fromTime.value,
-				toTime: data.toTime.value,
+				toTime: toTime,
+				fromTime: fromTime,
 			},
 			desc: data.description.value,
 		};

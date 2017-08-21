@@ -9,7 +9,8 @@ Template.userPosts_item.helpers({
 		return this.location;
 	},
 	timePreference: function() {
-		return 'from ' + this.timePref.fromTime + ' to ' + this.timePref.toTime;
+		return 'from ' + this.timePref.fromTime.toISOString()
+     + ' to ' + this.timePref.toTime.toISOString();
 	},
 	summary: function() {
 		if (this.postContent.desc.length > SUMMARY_LIMIT) {
