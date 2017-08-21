@@ -41,6 +41,10 @@ Template.userPosts_item.events({
 		var postToDecline = UserPosts.findOne({_id: this._id});
 
 		postToDecline.declinedUsers.push(Meteor.userId());
-		UserPosts.update(postToDecline._id, {$set: {declinedUsers: postToDecline.declinedUsers}});
+		UserPosts.update(postToDecline._id, {
+			$set: {
+				declinedUsers: postToDecline.declinedUsers,
+			},
+		});
 	},
 });

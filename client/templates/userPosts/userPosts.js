@@ -6,6 +6,11 @@
 
 Template.userPosts.helpers({
 	userPosts: function() {
-		return UserPosts.find({declinedUsers: {$ne: Meteor.userId()}});
+		return UserPosts.find(
+			{
+				authorName: {$ne: Meteor.user().username},
+				declinedUsers: {$ne: Meteor.userId()},
+			}
+		);
 	},
 });
