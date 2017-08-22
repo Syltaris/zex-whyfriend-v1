@@ -41,7 +41,10 @@ Template.userPosts_item.events({
 		e.preventDefault();
 
 		// check if room already exists, if not, create and add to chatrooms
-		if (Chatrooms.find({participants: {$elemMatch: {userId: Meteor.userId()}}}).count() <= 0) {
+		if (Chatrooms.find({
+			$and: [{participants: {$elemMatch: {userId: Meteor.userId()}}},
+							{participants: {$elemMatch: {userId: this.author_id}}}],
+			}).count() <= 0) {
 			console.log('did add new room');
 			var params = {
 				otherUserId: this.author_id,
@@ -54,13 +57,16 @@ Template.userPosts_item.events({
 			});
 		}
 
-		var roomIdToGo = Chatrooms.findOne({participants: {$elemMatch: {userId: Meteor.userId()}}});
+		var roomIdToGo = Chatrooms.findOne({
+			$and: [{participants: {$elemMatch: {userId: Meteor.userId()}}},
+							{participants: {$elemMatch: {userId: this.author_id}}}],
+			});
 
 		console.log('going to router');
 		console.log(roomIdToGo);
 
-		Router.go('chatView', {
-			roomIdToGo: roomIdToGo._id,
+		Router.go('chatsViewAll', {
+			room_id: roomIdToGo._id,
 		});
 	},
 	'click .decline': function(e) {

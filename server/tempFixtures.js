@@ -21,7 +21,7 @@ if (UserPosts.find().count() <= 0) {
 	for (var i=0; i<6; i++) {
 		UserPosts.insert({
 			authorName: 'l33th4x000r'+i,
-			author_id: 'PWZ6b9RFqtJn7kxZE',
+			author_id: 'PWZ6b9RFqtJn7kxZ'+i,
 			location: 'Beijing, Smog City',
 			timePref: {
 				fromTime: new Date(now + i*3600*1000),
@@ -40,7 +40,7 @@ if (UserPosts.find().count() <= 0) {
 
 	UserPosts.insert({
 		authorName: 'Sash Gray',
-		author_id: 'PWZ6b9RFqtJn7kxZE',
+		author_id: 'PWZ6b9RFqtJn7kxZk',
 		location: 'Shanghai, Xujiahui',
 		timePref: {
 			fromTime: new Date(now + 3600*1000),
