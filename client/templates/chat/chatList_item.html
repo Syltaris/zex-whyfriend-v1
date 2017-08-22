@@ -1,4 +1,6 @@
 
 <template name="chatList_item">
-  <li class="list-group-item"><a href="/my_chats/{{roomIdToGo}}" class="">{{otherUserName}}</a></li>
+  <a type="button" class="chatUser list-group-item {{selectedChatUser}}" href="/my_chats/{{roomIdToGo}}" >
+    {{otherUserName}}
+  </a>
 </template>
