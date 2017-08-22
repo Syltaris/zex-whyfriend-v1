@@ -13,7 +13,4 @@ Template.userPosts.helpers({
 			}
 		);
 	},
-	allPostsCount: function() {
-		return UserPosts.find().count();
-	},
 });
