@@ -40,6 +40,9 @@ Template.userPosts_item.events({
 	'click .contact': function(e) {
 		e.preventDefault();
 
+		// update session var for chat list
+		Session.set('selectedChatUser', this.authorName);
+
 		// check if room already exists, if not, create and add to chatrooms
 		if (Chatrooms.find({
 			$and: [{participants: {$elemMatch: {userId: Meteor.userId()}}},

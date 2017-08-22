@@ -17,5 +17,5 @@ Template.chatList_item.events({
   'click .chatUser': function() {
     console.log('ran');
     Session.set('selectedChatUser', this.participants.find(x => x.userId != Meteor.userId()).userName);
-  }
+  },
 });
