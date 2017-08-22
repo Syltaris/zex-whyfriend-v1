@@ -1,7 +1,19 @@
 <!-- default content for users/visitors -->
 
 <template name="homepage">
-<div class="container">
-	{{> userPosts}}
-</div>
+
+	<div class="panel panel-default">
+		<div class="panel-header">
+		  <ul class="nav nav-pills" role="tablist">
+		    <li role="presentation" class="active"><a href="#">All <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation"><a href="#">Locals <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation"><a href="#">Expats <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation"><a href="#">Guides <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation"><a href="#">Business Owners <span class="badge">{{allPostsCount}}</span></a></li>
+		  </ul>
+		</div>
+		<div class="panel-body">
+			{{> userPosts}}
+		</div>
+	</div>
 </template>

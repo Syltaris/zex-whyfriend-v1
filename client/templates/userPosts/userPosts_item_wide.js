@@ -13,8 +13,9 @@ Template.userPosts_item_wide.helpers({
 		return this.location;
 	},
 	timePreference: function() {
-		return 'from ' + this.timePref.fromTime.toISOString()
-     + ' to ' + this.timePref.toTime.toISOString();
+		return 'from ' + this.timePref.fromTime.getHours()
+    + ':' + this.timePref.fromTime.getMinutes()
+    + ' on ' + this.timePref.toTime.toDateString();
 	},
 	summary: function() {
 		return this.postContent.desc;
