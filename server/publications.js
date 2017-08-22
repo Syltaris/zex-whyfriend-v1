@@ -4,5 +4,9 @@ Meteor.publish('userPosts', function() {
 });
 
 Meteor.publish('userOwnPosts', function(username) {
-		return UserPosts.find({authorName: username});
+	return UserPosts.find({authorName: username});
+});
+
+Meteor.publish('chatrooms', function() {
+	return Chatrooms.find();
 });

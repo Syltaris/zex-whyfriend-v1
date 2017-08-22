@@ -1,0 +1,4 @@
+
+Template.chatsViewAll.helpers({
+
+});
