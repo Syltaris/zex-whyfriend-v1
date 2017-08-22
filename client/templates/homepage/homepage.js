@@ -1,7 +1,7 @@
 
 Template.homepage.helpers({
   allPostsCount: function() {
-    return UserPosts.find().count();
+    return UserPosts.find({authorName: {$ne: Meteor.user().username}}).count();
   },
   panel_colour: function() {
     switch (Session.get('postsView-type')) {

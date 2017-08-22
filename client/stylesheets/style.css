@@ -23,6 +23,10 @@ body {
 		margin: 5px;
 	}
 
+	.userOwnPosts_item .panel {
+		margin: 5px 0px 5px 0px;
+	}
+
 	.postItem .panel-body, .userOwnPosts_item .panel-body {
 		padding: 5px 10px 0px 10px;
 	}
@@ -32,13 +36,13 @@ body {
 			margin: 10px 0px 10px 0px;
 		}
 
-	.postItem .btn, .userOwnPosts_item .btn {
-		margin: 0px 10px 10px 10px;
+	.postItem .btn {
+		margin: 0px 0px 10px 0px;
 	}
 
-		.postItem .contact, .postItem .decline {
-			align: right;
-		}
+ .userOwnPosts_item .btn {
+		margin: 0px 10px 10px 10px;
+	}
 
 		.userOwnPosts_item .delete {
 			align: right;
