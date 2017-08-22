@@ -1,21 +1,30 @@
 
 <template name="chatsViewAll">
   <div class="chatList container">
-  <div class="panel panel-default">
-    {{#if ownChatRooms}}
-    <div class="panel-heading">
-      Your Opened Chats
-    </div>
-    <div class="panel-body">
-      <ul class="list-group">
-        {{#each ownChatRooms}}
-          {{> chatList_item}}
-        {{/each}}
-      </ul>
-    </div>
-    {{else}}
-        <h4>You have no chats.</h4>
-    {{/if}}
-  </div>
+    <div class="row">
+      <div class="chatList panel panel-default col-md-2">
+        {{#if ownChatRooms}}
+        <div class="panel-heading">
+          Your Opened Chats
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            {{#each ownChatRooms}}
+              {{> chatList_item}}
+            {{/each}}
+          </ul>
+        </div>
+        {{else}}
+            <h4>You have no chats.</h4>
+        {{/if}}
+      </div>
+      <div class="col-md-10">
+        <div class="chatView container-fluid">
+          <div class="panel panel-default">
+            {{> SimpleChatWindow roomId=roomId username=username }}
+          </div>
+        </div>
+      </div>
+      </div>
   </div>
 </template>

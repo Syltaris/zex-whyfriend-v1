@@ -69,3 +69,16 @@ body {
 .chatList {
 	margin: 0px;
 }
+
+	.chatList .panel-body {
+		padding: 0px;
+	}
+
+.chatView {
+	padding: 0px;
+	margin: 0px;
+}
+
+	.chatView .panel-body {
+		padding: 0px;
+	}
