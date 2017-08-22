@@ -8,6 +8,10 @@ body {
 
 }
 
+.homepage .panel-heading {
+	padding: 0px;
+}
+
 .navbar-brand {
 	padding: 5px 5px 5px 5px;
 }

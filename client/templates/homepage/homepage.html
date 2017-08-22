@@ -1,15 +1,14 @@
 <!-- default content for users/visitors -->
 
 <template name="homepage">
-
-	<div class="panel panel-default">
-		<div class="panel-header">
+	<div class="homepage panel {{panel_colour}}">
+		<div class="panel-heading">
 		  <ul class="nav nav-pills" role="tablist">
-		    <li role="presentation" class="active"><a href="#">All <span class="badge">{{allPostsCount}}</span></a></li>
-		    <li role="presentation"><a href="#">Locals <span class="badge">{{allPostsCount}}</span></a></li>
-		    <li role="presentation"><a href="#">Expats <span class="badge">{{allPostsCount}}</span></a></li>
-		    <li role="presentation"><a href="#">Guides <span class="badge">{{allPostsCount}}</span></a></li>
-		    <li role="presentation"><a href="#">Business Owners <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation" class="all {{activeClass 'all'}}"><a href="#">All <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="button" class="locals {{activeClass 'locals'}}"><a href="#">Locals <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="button" class="expats {{activeClass 'expats'}}"><a href="#">Expats <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation" class="guides {{activeClass 'guides'}}"><a href="#">Guides <span class="badge">{{allPostsCount}}</span></a></li>
+		    <li role="presentation" class="bowners {{activeClass 'bowners'}}"><a href="#">Business Owners <span class="badge">{{allPostsCount}}</span></a></li>
 		  </ul>
 		</div>
 		<div class="panel-body">
