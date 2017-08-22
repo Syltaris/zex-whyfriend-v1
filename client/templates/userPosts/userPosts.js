@@ -10,6 +10,9 @@ Template.userPosts.helpers({
 			{
 				authorName: {$ne: Meteor.user().username},
 				declinedUsers: {$ne: Meteor.userId()},
+			},
+			{
+				sort: {datePosted: -1},
 			}
 		);
 	},
